@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muniz Pizzaria - Delivery</title>
+  <meta name="description" content="Delivery de pizzas em Olinda/Recife - Muniz Pizzaria"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo-wrapper">
+      <div class="logo-image">
+        <div style="font-size:3rem; color:#ff4500;">🍕</div>
+      </div>
+      <div class="logo-text">
+        <div class="logo-main">MUNIZ <span>PIZZARIA</span></div>
+        <div class="logo-subtitle">SABOR QUE CONQUISTA</div>
+      </div>
+    </div>
+
+    <div class="header-info">
+      <p>📍 Estrada de Águas Compridas S/N, Olinda/Recife</p>
+      <p>📞 <strong>(81) 98481-9344</strong> • 🕒 Qua a Dom 18:00 – 00:00</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-container">
+    <button onclick="scrollToSection('combos')"><i class="fas fa-fire"></i> Combos</button>
+    <button onclick="scrollToSection('pizzas-8')"><i class="fas fa-pizza-slice"></i> Pizzas 8 Fatias</button>
+    <button onclick="scrollToSection('pizzas-4')"><i class="fas fa-pizza-slice"></i> 4 Fatias</button>
+    <button onclick="scrollToSection('doces-8')"><i class="fas fa-candy-cane"></i> Doces 8 Fatias</button>
+    <button onclick="scrollToSection('doces-4')"><i class="fas fa-candy-cane"></i> Doces 4 Fatias</button>
+    <button onclick="scrollToSection('calzones')"><i class="fas fa-hotdog"></i> Calzones</button>
+    <button onclick="scrollToSection('bebidas')"><i class="fas fa-glass-whiskey"></i> Bebidas</button>
+  </div>
+</nav>
+
+<main id="main-content"></main>
+
+<div class="social-float">
+  <a href="https://wa.me/5581984819344?text=Oi!%20Quero%20fazer%20um%20pedido" target="_blank" class="social-btn whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://www.instagram.com" target="_blank" class="social-btn instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+<!-- Modal de dados do cliente (APENAS APARECE QUANDO O CLIENTE CLICA EM "FINALIZAR PEDIDO") -->
+<div class="data-modal" id="dataModal">
+  <div class="data-modal-content">
+    <div class="data-modal-header">
+      <h3><i class="fas fa-user"></i> Dados para Entrega</h3>
+    </div>
+    <div class="data-modal-body">
+      <form id="clientForm">
+        <div class="data-form-group">
+          <label>Nome completo *</label>
+          <input type="text" id="clientName" placeholder="Seu nome">
+          <div class="error-text">Por favor, digite seu nome</div>
+        </div>
+        
+        <div class="data-form-group">
+          <label>Endereço completo *</label>
+          <input type="text" id="clientAddress" placeholder="Rua, número, bairro">
+          <div class="error-text">Por favor, digite o endereço</div>
+        </div>
+        
+        <div class="data-form-group">
+          <label>Telefone *</label>
+          <input type="tel" id="clientPhone" placeholder="(81) 99999-9999">
+          <div class="error-text">Digite um telefone válido</div>
+        </div>
+        
+        <div class="data-form-group">
+          <label>Forma de pagamento *</label>
+          <div class="payment-options">
+            <div class="payment-option" data-value="Dinheiro">💵 Dinheiro</div>
+            <div class="payment-option" data-value="Cartão de Crédito">💳 Cartão</div>
+            <div class="payment-option" data-value="PIX">📱 PIX</div>
+          </div>
+          <div id="changeField" class="change-field">
+            <label style="margin-top:10px; display:block;">Troco para quanto?</label>
+            <input type="text" id="changeFor" placeholder="R$ 50,00">
+          </div>
+        </div>
+        
+        <div class="data-form-group">
+          <label>Observações do pedido</label>
+          <textarea id="orderNotes" placeholder="Sem cebola, ponto da massa, etc..."></textarea>
+        </div>
+      </form>
+    </div>
+    <div class="data-modal-footer">
+      <button class="data-modal-btn back" onclick="app.closeDataForm()">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </button>
+      <button class="data-modal-btn send" onclick="app.sendToWhatsApp()">
+        <i class="fab fa-whatsapp"></i> Enviar Pedido
+      </button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Muniz Pizzaria • Estrada de Águas Compridas S/N, Olinda/Recife • 🍕 Feito com carinho</p>
+  <p class="dev-credits">
+    Desenvolvido por <a href="https://instagram.com/fellipigodoy" target="_blank">Fellipi Godoy</a> • <i class="fab fa-instagram"></i> @fellipigodoy
+  </p>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
