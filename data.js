@@ -6,20 +6,14 @@ const menuData = {
       {
         title: "Combo Casal",
         description: "1 Pizza Grande (8 fatias) + 1 Pizza Doce Pequena (4 fatias) + Refrigerante 1L",
-        price: "R$ 60,00",
+        price: "R$ 78,99",
         img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
       },
       {
         title: "Combo Família",
         description: "2 Pizzas Grandes (8 fatias cada) + Refrigerante 2L",
-        price: "R$ 90,00",
+        price: "R$ 110,99",
         img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        title: "Promo Extra",
-        description: "Pedidos acima de <strong>R$ 60,00</strong> → <span class='highlight'>FRETE GRÁTIS</span>",
-        price: "",
-        img: ""
       }
     ]
   },
@@ -236,7 +230,7 @@ const menuData = {
       { 
         title: "Costela c/catupiry", 
         description: "Massa fresca, molho da casa, mussarela, costela desfiada, cebola, bacon, catupiry e orégano...", 
-        price: "R$ 59,99", 
+        price: "R$ 39,99",
         img: "https://i.ibb.co/Y47mShF2/91-CC3216-660-B-4804-9-A1-C-C23-E382-D5846.jpg" 
       },
       { 
@@ -375,6 +369,18 @@ const menuData = {
     title: "Bebidas",
     icon: "fas fa-glass-whiskey",
     items: [
+      { 
+        title: "Coca-Cola Lata 350ml", 
+        description: "Refrigerante Coca-Cola Lata 350ml", 
+        price: "R$ 5,50",
+        img: "https://i.ibb.co/WWW15Xsb/CE8-BD72-B-EEB9-4813-AA68-DD93304-F43-BF.jpg" 
+      },
+      { 
+        title: "Guaraná Antarctica Lata 350ml", 
+        description: "Refrigerante Guaraná Antarctica Lata 350ml", 
+        price: "R$ 4,50",
+        img: "https://i.ibb.co/xKDxrWy9/A858424-A-84-B2-471-B-8-C9-F-F57-B44192029.jpg"
+      },
       { 
         title: "Fanta 2L", 
         description: "Refrigerante Fanta 2 Litros", 
